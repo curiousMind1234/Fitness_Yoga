@@ -57,7 +57,7 @@ const SearchYoga = ({ setCategory, setAsanas, activeCategory, setYogaPoses }) =>
     }
 
     return (
-        <Stack alignItems="center" mt="37px"
+        <Stack alignItems="center" sx={{mt:{lg:"0px", xs :"140px"}}}
             justifyContent="center" p="20px">
             <Typography fontWeight={700}
                 sx={{ fontSize: { lg: '44px', xs: '30px' } }}

@@ -1,47 +1,55 @@
 import React from 'react'
 import { Box, Typography, Button } from '@mui/material';
 
-import imgSource from "../assets/images/yoga/icon.jpg";
+import imgSource from "../assets/images/about-banner.png";
+import imgSource1 from "../assets/images/about-circle-one.png"
+import imgSource2 from "../assets/images/about-circle-two.png";
 
 const YogaBanner = () => {
   return (
 
-    <Box className="yoga-banner" sx={{md: "75vh"  }} >
-      <Box sx={{
-        mt: { lg: "180px", xs: "120px" },
-        ml:"80px"
-      }} position="absolute" >
-        <Typography color="#FF2625"
-          fontWeight="600" fontSize="26px" >
-          Fitness Club
-        </Typography>
+    <Box sx={{
+      mt: { lg: '150px', xs: '70px' },
+      ml: { sm: '50px', md: '100px' }
+    }}
+    >
+      <Typography color="#FF2625"
+        fontWeight="600" fontSize="35px" >
+        HealthHub
+      </Typography>
 
-        <Typography fontWeight={700} fontSize={40}
-          sx={{ fontsize: { lg: '3rem', xs: '90px' } }}
-          mb="23px" mt="30px"
-         color="#E8F6EF">
-          Inhale the future <br /> Exhale the past
-        </Typography>
+      <Typography fontWeight={700}
+        sx={{ fontSize: { lg: '60px', xs: '23px', md: "50px" } }}
+        mb="23px" mt="30px" color="#F8F1F1">
+        Inhale the future <br /> Exhale the past
+      </Typography>
 
-        <Typography fontSize="22px" lineHeight="35px"
-          mb={3} color="#FFF9C9">
-          Check out the most effective Yoga Asanas
-        </Typography>
+      <Typography fontSize="22px" lineHeight="35px"
+        mb={3} color="#E8AA42" fontWeight={500} >
+        Check out the most effective Yoga Asanas
+      </Typography>
 
-        <Button variant="contained" color="error" href="#exercises"
-          sx={{ backgroundColor: '3ff2625', padding: '10px' }}
-        >
-          Expolre Asanas
-        </Button>
-        
-          <img src={imgSource} alt="HeroBanner" position="absolute"  sx={{
-            width:{lg:"400px",md:"350px"},
-            mt:{lg:'212px', xs:"160px", md:"-200px"}
-          }}
-          className="yoga-banner-img">
+      <Button variant="contained" color="error" href="#exercises"
+        sx={{ backgroundColor: '3ff2625', padding: '10px' }}
+      >
+        Expolre Asanas
+      </Button>
+      <Typography fontWeight={600}
+        color="#ff2625" sx={{
+          opacity: 0.1,
+          display: { lg: "block", xs: "none" }, fontSize: '200px'
+        }}>Yoga Asanas</Typography>
+      <img src={imgSource1} alt="HeroBanner" position="absolute"
+        className="hero-banner-img1" >
       </img>
-      </Box>
+      <img src={imgSource2} alt="HeroBanner" position="absolute"
+        className="hero-banner-img2" >
+      </img>
+      <img src={imgSource} alt="HeroBanner" position="absolute" 
+        className="yoga-banner" >
+      </img>
     </Box>
+
 
   )
 }

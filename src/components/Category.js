@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import Pagination from '@mui/material/Pagination';
 import { Box, Typography, Stack } from '@mui/material';
 import CategoryCard from './CategoryCard';
+import Spinner from './Spinner';
 
 const Category = ({ setAsanas, asanas, category, setYogaPoses, yogaPoses }) => {
     console.log("category:", category)
 
     console.log("yogaPose:", yogaPoses)
-
     const [currentPage, setCurrentPage] = useState(1);
     const exercisesPerPage = 9;
 
@@ -62,14 +62,17 @@ const Category = ({ setAsanas, asanas, category, setYogaPoses, yogaPoses }) => {
             sx={{ mt: { lg: '109px' } }}
             mt="50px"
             p='20px'
+            backgroundColor ="#001C30"
         >
             <Typography variant='h4' mb='46px' fontWeight='bold'
-                sx={{ fontSize: { lg: '44px', xs: '30px' } }}>
+                sx={{ fontSize: { lg: '44px', xs: '30px' } }}color="#F8F1F1">
                 Showing Results
             </Typography>
+            
             <Stack direction="row" sx={{ gap: { lg: '60px', xs: '50px' } }}
                 flexWrap="wrap"
                 justifyContent="center">
+                    {(!currentExercises.length) ? <Spinner /> : ""}
                 {currentExercises.map((asan, index) => (
                     <CategoryCard key={index} asan={asan} />
                 ))}

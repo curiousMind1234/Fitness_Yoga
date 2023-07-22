@@ -11,11 +11,20 @@ import BMICalc from './Pages/BMICalc';
 import Yoga from './Pages/Yoga';
 import YogaDetail from './Pages/YogaDetail';
 
+import imgSource from "./assets/images/bg.jpg";
+
 const App = () => {
+  const styles={
+    herobanner :{
+      backgroundImage : `url(${imgSource})`
+    }
+ }
   return (
-    <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
+    <Box   sx={{height : {lg: "860px", xs :"598px", md:"700px" , sm:"600px" }, 
+    }} backgroundColor="#001C30">
+      
       <Navbar />
-      <Routes>
+      <Routes  > 
         <Route path='/' element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
         <Route path="/bmi-calculator" element={<BMICalc />} />

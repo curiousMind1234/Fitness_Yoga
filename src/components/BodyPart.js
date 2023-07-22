@@ -30,7 +30,7 @@ const BodyPart = ({ activeBodyPart, setBodyPart, bodyPart}) => {
                 alt='dumbell'
                 style={{ width: '100px', height: '100px' }}
             />
-            <Typography fontSize="24px" fontWeight="bold" color="#3A1212">
+            <Typography fontSize="24px" fontWeight="bold" color="#3A1212" textTransform="capitalize">
                 {bodyPart}
             </Typography>
         </Stack>

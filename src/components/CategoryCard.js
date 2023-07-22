@@ -4,7 +4,7 @@ import { Button, Box, Stack, Typography } from '@mui/material';
 
 
 const CategoryCard = ({ asan }) => {
-    
+   
     return (
         <Box direction="row">
             <Link to={`/yoga-details/${asan.id}`} >

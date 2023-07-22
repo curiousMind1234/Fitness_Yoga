@@ -49,13 +49,17 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             sx={{ mt: { lg: '109px' } }}
             mt="50px"
             p='20px'
+            backgroundColor ="#001C30"
         >
             <Typography variant='h4' mb='46px' fontWeight='bold'
-                sx={{ fontSize: { lg: '44px', xs: '30px' } }}>
+                sx={{ fontSize: { lg: '44px', xs: '30px' }, ml: { sm: '50px', md:'100px' } }} 
+                color="#F8F1F1"
+                >
                 Showing Results
             </Typography>
-            <Stack direction="row" sx={{ gap: { lg: '60px', xs: '50px' } }}
+            <Stack direction="row" sx={{ gap: { lg: '60px', xs: '50px' }}}
                 flexWrap="wrap"
+                ml = "30px"
                 justifyContent="center">
                 {currentExercises.map((exercise, index) => (
                     <ExerciseCard key={index} exercise={exercise} />
@@ -72,6 +76,11 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
                     page={currentPage}
                     onChange={paginate}
                     size="large"
+                    sx={{
+                        ".page-item .page-link": {
+                          color: "red",
+                        },
+                      }}
                 />
               )}
             </Stack>

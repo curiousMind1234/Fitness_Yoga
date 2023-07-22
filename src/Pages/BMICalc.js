@@ -51,18 +51,18 @@ const BMICalc = () => {
         <Stack direction="row" display="flex" justifyContent="space-evenly"
             sx={{
                 mb: { xs: '0px', lg: '70px', md: "10px" },
-                mt: { lg: "120px", xs: '100px', md: "100px" }
+                
             }}
             p="30px"
-            borderRadius="20px"
             position="relative">
-            <Card sx={{ minWidth: 275 }} className="bmi" borderRadius="30px">
+            <Card sx={{ minWidth: 275, borderRadius:"20px",
+             width:{lg:"600px", xs:"0px"}, height:{lg:'430px', xs :'350px'} }} className="bmi" >
                 <CardContent>
                     <Typography fontWeight={600}
                         sx={{
                             fontSize: { lg: '33px', xs: '20px', md: '25px' },
                             mb: { lg: '45px', xs: '25px' },
-                            mt: { lg: '0', xs: '10px' }
+                            mt: { lg: '20px', xs: '10px' }
                         }}
                         textAlign="center" color="#fff" alignItems="center" justifyContent="center">
                         Calculate your BMI Score
@@ -70,7 +70,7 @@ const BMICalc = () => {
                     <FormHelperText id="outlined-weight-helper-text"
                         sx={{
                             fontSize: { lg: '22px', xs: '14px', md: '19px' },
-                            ml: { lg: '4px', sm: '2px', xs: '10px' }, mb: "10px",
+                            ml: { lg: '40px', sm: '2px', xs: '10px' }, mb: "10px",
                             color: '#fff',
                             fontWeight: '500',
 
@@ -83,8 +83,8 @@ const BMICalc = () => {
                                 borderRadius: '4px',
                                 color: "#fff",
                                 height: "3px",
-
                             },
+                            ml: { lg: '40px', sm: '2px', xs: '10px' },
                             width: { lg: '180px', xs: '90px' },
                             borderRadius: '40px'
                         }}
@@ -98,10 +98,10 @@ const BMICalc = () => {
                             <FormHelperText id="outlined-weight-helper-text"
                                 sx={{
                                     fontSize: { lg: '22px', xs: '14px', md: '19px' },
-                                    ml: { lg: '4px', sm: '2px', xs: '10px' }, mb: "10px",
+                                    ml: { lg: '40px', sm: '2px', xs: '10px' }, mb: "10px",
                                     color: '#fff',
                                     fontWeight: '500',
-                                    marginTop: "10px"
+                                    marginTop: "35px"
                                 }} >Weight (in kgs)</FormHelperText>
 
                             <TextField
@@ -113,6 +113,7 @@ const BMICalc = () => {
                                         color: "#fff",
                                         height: "3px",
                                     },
+                                    ml: { lg: '40px', sm: '2px', xs: '10px' },
                                     width: { lg: '180px', xs: '90px', md: "140px" },
                                     borderRadius: '40px'
                                 }}
@@ -126,9 +127,10 @@ const BMICalc = () => {
                                 sx={{
                                     fontSize: { lg: '22px', xs: '14px', md: '19px' },
                                     ml: { lg: '4px', sm: '2px', xs: '10px' }, mb: "10px",
+                                    mr : {lg : '70px'},
                                     color: '#fff',
                                     fontWeight: '500',
-                                    marginTop: "10px"
+                                    marginTop: "35px"
                                 }} >Height (in cms)</FormHelperText>
 
                             <TextField
@@ -157,7 +159,7 @@ const BMICalc = () => {
                             width: { lg: '150px', xs: '100px' },
                             fontSize: { lg: '20px', xs: '14px' },
                             height: '40px',
-                            ml: { lg: "140px", xs: "70px", md: "100px" }
+                            ml: { lg: "220px", xs: "70px", md: "100px" }
                         }}
                         className="search-btn"
                         padding="20px"
