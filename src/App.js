@@ -20,7 +20,7 @@ const App = () => {
     }
  }
   return (
-    <Box   sx={{height : {lg: "860px", xs :"598px", md:"700px" , sm:"600px" }, 
+    <Box   sx={{height : {lg: "860px", xs :"598px", md:"700px" , sm:"600px" } 
     }} backgroundColor="#001C30">
       
       <Navbar />
