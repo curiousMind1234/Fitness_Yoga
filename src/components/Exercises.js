@@ -67,7 +67,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             </Stack>
             <Stack mt='100px' alignItems='center'>
               {exercises.length > 9 && (
-                <Pagination
+                <Pagination 
                     color="standard"
                     shape="rounded"
                     defaultPage={1}
@@ -77,9 +77,8 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
                     onChange={paginate}
                     size="large"
                     sx={{
-                        ".page-item .page-link": {
-                          color: "red",
-                        },
+                        
+                        button:{color: '#ffffff'},
                       }}
                 />
               )}
